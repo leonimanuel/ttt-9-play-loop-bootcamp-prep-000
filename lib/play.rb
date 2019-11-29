@@ -41,4 +41,5 @@ def play
   while i < 9
     turn(board)
   end
+  puts "GAME OVER"
 end
