@@ -30,6 +30,10 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
+    if current_player == "X"
+      current_player = "O"
+    else current_player = "X"
+    end
   else
     turn(board)
   end
@@ -39,6 +43,7 @@ end
 def play(board)
   i = 0
   while i < 9
+    
     turn(board)
     i += 1
   end
